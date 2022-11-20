@@ -1,0 +1,48 @@
+package logging
+
+import (
+	"fmt"
+	"log"
+	"os"
+	"time"
+)
+
+var (
+	LogSavePath = "runtime/logs/"
+	LogSaveName = "web"
+	TimeFormat  = "2006-01-02"
+	LogFileExt  = "log"
+)
+
+func getLogFilePath() string {
+	return fmt.Sprintf("%s", LogSavePath)
+}
+
+func getLogFullPath() string {
+	prefixPath := getLogFilePath()
+	suffixPath := fmt.Sprintf("%s%s.%s", LogSaveName, time.Now().Format(TimeFormat), LogFileExt)
+	return fmt.Sprintf("%s%s", prefixPath, suffixPath)
+}
+
+func openLogFile(filepath string) *os.File {
+	_, err := os.Stat(filepath)
+	switch {
+	case os.IsNotExist(err):
+		mkdir()
+	case os.IsPermission(err):
+		log.Fatalf("Permission :%v", err)
+	}
+	handle, err := os.OpenFile(filepath, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		log.Fatalf("Fail to OpenFile :%v", err)
+	}
+	return handle
+}
+
+func mkdir() {
+	dir, _ := os.Getwd()
+	err := os.MkdirAll(dir+"/"+getLogFilePath(), os.ModePerm)
+	if err != nil {
+		panic(err)
+	}
+}

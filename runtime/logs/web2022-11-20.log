@@ -1,0 +1,33 @@
+[INFO][main.go:37]2022/11/20 10:11:41 Actual pid is 52687
+[ERROR][auth.go:22]2022/11/20 10:12:08 bind json failed EOF
+[INFO][auth.go:43]2022/11/20 10:12:08 Username.Required. Username Can not be empty
+[INFO][auth.go:43]2022/11/20 10:12:08 Password.Required. Password Can not be empty
+[INFO][main.go:42]2022/11/20 10:17:36 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:17:36 Actual pid is 52687
+[INFO][main.go:37]2022/11/20 10:17:52 Actual pid is 52791
+[INFO][main.go:42]2022/11/20 10:20:38 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:20:38 Actual pid is 52791
+[INFO][main.go:37]2022/11/20 10:20:44 Actual pid is 52868
+[INFO][main.go:42]2022/11/20 10:21:11 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:21:11 Actual pid is 52868
+[INFO][main.go:37]2022/11/20 10:22:38 Actual pid is 53009
+[INFO][main.go:42]2022/11/20 10:25:27 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:25:27 Actual pid is 53009
+[INFO][main.go:37]2022/11/20 10:25:33 Actual pid is 53147
+[INFO][main.go:42]2022/11/20 10:33:26 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:33:26 Actual pid is 53147
+[INFO][main.go:37]2022/11/20 10:33:30 Actual pid is 53300
+[INFO][main.go:42]2022/11/20 10:33:54 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:33:54 Actual pid is 53300
+[INFO][main.go:37]2022/11/20 10:33:58 Actual pid is 53348
+[INFO][main.go:42]2022/11/20 10:36:05 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:36:05 Actual pid is 53348
+[INFO][main.go:37]2022/11/20 10:40:03 Actual pid is 53828
+[INFO][main.go:42]2022/11/20 10:42:41 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:42:41 Actual pid is 53828
+[INFO][main.go:37]2022/11/20 10:43:48 Actual pid is 54084
+[INFO][main.go:42]2022/11/20 10:44:10 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 10:44:10 Actual pid is 54084
+[INFO][main.go:37]2022/11/20 10:49:53 Actual pid is 54299
+[INFO][main.go:42]2022/11/20 11:38:24 Server err: accept tcp [::]:8000: use of closed network connection
+[INFO][main.go:37]2022/11/20 11:38:24 Actual pid is 54299

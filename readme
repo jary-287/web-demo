@@ -1,0 +1,7 @@
+conf : 配置文件
+middleware : 中间件
+models: 模型层
+router: 路由
+pkg: 第三方包
+runtime 运行时
+
