@@ -31,3 +31,10 @@
 [INFO][main.go:37]2022/11/20 10:49:53 Actual pid is 54299
 [INFO][main.go:42]2022/11/20 11:38:24 Server err: accept tcp [::]:8000: use of closed network connection
 [INFO][main.go:37]2022/11/20 11:38:24 Actual pid is 54299
+[ERROR][models.go:45]2022/11/20 17:20:24 sql: unknown driver "" (forgotten import?)
+[ERROR][models.go:47]2022/11/20 17:50:05 sql: unknown driver "" (forgotten import?)
+[ERROR][models.go:47]2022/11/20 17:52:02 sql: unknown driver "" (forgotten import?)
+[ERROR][models.go:47]2022/11/20 17:52:52 sql: unknown driver "" (forgotten import?)
+[ERROR][models.go:47]2022/11/20 17:55:50 sql: unknown driver "" (forgotten import?)
+[ERROR][models.go:47]2022/11/20 17:56:19 sql: unknown driver "" (forgotten import?)
+[ERROR][models.go:47]2022/11/20 17:56:44 sql: unknown driver "" (forgotten import?)

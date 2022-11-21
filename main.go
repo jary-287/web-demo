@@ -1,12 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"syscall"
+	"log"
+	"net/http"
 
-	"github.com/fvbock/endless"
 	_ "github.com/jary-287/web-demo/docs"
-	"github.com/jary-287/web-demo/pkg/logging"
 	"github.com/jary-287/web-demo/pkg/setting"
 	"github.com/jary-287/web-demo/router"
 )
@@ -28,18 +26,14 @@ import (
 
 // @securityDefinitions.basic  BasicAuth
 func main() {
-	endless.DefaultReadTimeOut = setting.ReadTimeout
-	endless.DefaultWriteTimeOut = setting.WriteTimeout
-	endless.DefaultMaxHeaderBytes = 1 << 20
-	endPoint := fmt.Sprintf(":%d", setting.HttpPort)
-	server := endless.NewServer(endPoint, router.InitRouter())
-	server.BeforeBegin = func(add string) {
-		logging.Info("Actual pid is", syscall.Getpid())
+	router := router.InitRouter()
+	server := &http.Server{
+		Handler:      router,
+		ReadTimeout:  setting.ReadTimeout,
+		WriteTimeout: setting.WriteTimeout,
+	}
+	if err := server.ListenAndServe(); err != nil {
+		log.Panicln("the server start failed:", err.Error())
 	}
 
-	err := server.ListenAndServe()
-	if err != nil {
-		logging.Info("Server err:", err)
-	}
-	server.ListenAndServe()
 }
